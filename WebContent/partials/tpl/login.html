@@ -1,0 +1,23 @@
+<head>
+<link rel="stylesheet"  href="css/loginStyle.css">
+</head>
+<div>
+<form id = "login">
+    <h1>ZevaTechnology Recruiting</h1>
+    <br>
+    <br>
+    <div class = "username">
+       <label for = "typeYourUserNameHere">User Name:</label>
+       <input ng-model ="user.name" type ="text" placeholder="Enter Username" required>
+    </div>
+    <div class = "password">
+       <label for = "typeYourPasswordHere">Password:</label>
+       <input ng-model ="user.password" type ="password" placeholder="Enter Password" required>
+    </div>
+    <br>
+    <button id="loginButton" type = "submit" ng-disabled = "form.$invalid" ng-click = "login(user)"> Login</button>
+    <p>{{msgtxt}}</p>
+
+</form>
+</div>
+

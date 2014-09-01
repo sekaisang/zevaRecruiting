@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping package="com.zeva.recruiting.domain">
+    <class name="DiceProfile" table="user_dice_profile">
+        <id name="guid" type="int" column = "GUID">
+            <generator class="identity" />
+        </id>
+        <property name="userId" type="integer" column = "USER_ID" />
+        <property name="diceUsername" type="string" column = "DICE_USERNAME" />
+        <property name="dicePassword" type="string" column = "DICE_PASSWORD" />    
+        <property name="max" type="integer" column = "MAX_CANDIDATES" />
+        <property name="candidateIndex" type="integer" column = "CANDIDATE_START_INDEX"/>
+        <property name="afterDate" type="string" column = "AFTER_DATE" />       
+        <property name="searchAgent" type="string" column = "SEARCH_AGENT" />
+        <property name="skipViewed" type="character" column = "SKIP_VIEWED" />
+        <property name="sortByDate" type="character" column = "SORT_BY_DATE" />
+        <property name="sendEmail" type="character" column = "SEND_EMAIL" />
+        <property name="skipNoRelocation" type="character" column = "SKIP_NO_RELOCATION" />
+        <property name="emailTemplate" type="string" column = "EMAIL_TEMPLATE" />   
+    </class>
+</hibernate-mapping>

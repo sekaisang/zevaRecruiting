@@ -1,0 +1,289 @@
+@import
+	url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	width: 1570px;
+	height: 1300px;
+}
+
+body {
+	background: #567;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#search {
+	background: #f0f0f0;
+	padding: 10% 12%;
+	width: 100%;
+	height: 100%;
+}
+
+#emailTemplate {
+	background: #f0f0f0;
+	padding: 80px 5px 10px 80px;
+	width: 100%;
+	height: 100%;
+}
+
+#output {
+	background: #f0f0f0;
+	padding: 80px 0px 10px 80px;
+	width: 100%;
+	height: 80%;
+}
+
+#logoutButton {
+	font-size: 100%;
+	width: 100px;
+	background: #3399cc;
+	display: block;
+	margin: 0 auto;
+	margin-top: 1%;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	cursor: pointer;
+	transition: background .3s;
+	-webkit-transition: background .3s;
+}
+
+#logoutButton:hover {
+	background: #2288bb;
+}
+
+#dice, #monster, #runButton {
+	font-size: 100%;
+	width: 150px;
+	background: #3399cc;
+	display: block;
+	margin: 0 auto;
+	margin-top: 1%;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	cursor: pointer;
+	transition: background .3s;
+	-webkit-transition: background .3s;
+}
+
+#manageAgentButton {
+	font-size: 100%;
+	width: 200px;
+	background: #3399cc;
+	display: block;
+	margin: 0 auto;
+	margin-top: 1%;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	cursor: pointer;
+	transition: background .3s;
+	-webkit-transition: background .3s;
+}
+
+#runButton:hover {
+	background: #2288bb;
+}
+
+h1 {
+	background: #3399cc;
+	padding: 20px 0;
+	font-size: 140%;
+	font-weight: 300;
+	text-align: center;
+	color: #fff;
+}
+
+input[type="text"], input[type="password"], input[type="number"] {
+	width: 200px;
+	height: 30px;
+	background: #fff;
+	margin-bottom: 1%;
+	margin-left: 1%;
+	border: 1px solid #ccc;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 95%;
+	color: #555;
+}
+
+#email, #output {
+	width: 600px;
+	height: 580px;
+	background: #fff;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 120%;
+	color: #555;
+	text-align: left;
+}
+
+input[type="date"] {
+	margin-left: 1%;
+	width: 150px;
+	height: 30px;
+	background: #fff;
+	margin-bottom: 1%;
+	border: 1px solid #ccc;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 95%;
+	color: #555;
+}
+
+select {
+	margin-left: 1%;
+	width: 150px;
+	height: 30px;
+	background: #fff;
+	margin-bottom: 1%;
+	border: 1px solid #ccc;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 95%;
+	color: #555;
+}
+
+#runButton {
+	position: relative;
+	left: -30px;
+	top: 30px;
+}
+
+#dice {
+	float: left;
+	position: relative;
+	left: 20px;
+}
+
+#logoutButton {
+	position: relative;
+	top: -10px;
+}
+
+#right {
+	
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000000;
+}
+
+.modal-backdrop.fade {
+  opacity: 0;
+}
+
+.modal-backdrop,
+.modal-backdrop.fade.in {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+.modal {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  z-index: 1050;
+  width: 560px;
+  margin-left: -280px;
+  background-color: #ffffff;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  *border: 1px solid #999;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  outline: none;
+  -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+     -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -webkit-background-clip: padding-box;
+     -moz-background-clip: padding-box;
+          background-clip: padding-box;
+}
+
+.modal.fade {
+  top: -25%;
+  -webkit-transition: opacity 0.3s linear, top 0.3s ease-out;
+     -moz-transition: opacity 0.3s linear, top 0.3s ease-out;
+       -o-transition: opacity 0.3s linear, top 0.3s ease-out;
+          transition: opacity 0.3s linear, top 0.3s ease-out;
+}
+
+.modal.fade.in {
+  top: 10%;
+}
+
+.modal-header {
+  padding: 9px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.modal-header .close {
+  margin-top: 2px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  line-height: 30px;
+}
+
+.modal-body {
+  position: relative;
+  max-height: 400px;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.modal-form {
+  margin-bottom: 0;
+}
+
+.modal-footer {
+  padding: 14px 15px 15px;
+  margin-bottom: 0;
+  text-align: right;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  -webkit-border-radius: 0 0 6px 6px;
+     -moz-border-radius: 0 0 6px 6px;
+          border-radius: 0 0 6px 6px;
+  *zoom: 1;
+  -webkit-box-shadow: inset 0 1px 0 #ffffff;
+     -moz-box-shadow: inset 0 1px 0 #ffffff;
+          box-shadow: inset 0 1px 0 #ffffff;
+}
+
+.modal-footer:before,
+.modal-footer:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.modal-footer:after {
+  clear: both;
+}
+
+.modal-footer .btn + .btn {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+
+.modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+
+.modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}

@@ -1,0 +1,141 @@
+
+<head>
+<link rel="stylesheet" href="css/homeStyle2.css">
+<!--  <link rel="stylesheet" href="css/bootstrap.css">-->
+</head>
+
+<div>
+	<h1>Welcome to ZevaTechnology Recruiting Service</h1>
+	<table>
+		<tr>
+			<td id="left">
+				<form id="search">
+
+					<button id="dice" ng-click="diceDefault(setup)">Dice</button>
+					<button id="monster" ng-click="monsterDefault(setup)">
+						Monster</button>
+					<br> <br> <br>
+					<div class="username">
+						<label>User Name:</label> 
+						<input ng-model="setup.username" type="text"/>
+					</div>
+					<div class="password">
+						<label>Password:</label> 
+						<input ng-model="setup.password" type="password" />
+					</div>
+					<div>
+						<p>Search Setup:</p>
+					</div>
+
+					<div class="agent">
+						<label>Search Agent:</label> 
+						<input ng-model="setup.agent" type="text"> 
+						<button class="btn" ng-click="getAgents(setup); open()">Choose from history</button>
+
+						<div modal="chosenCompany" close="cancel2()">
+							<p>Company:</p>
+							<input ng-model="setup.company">
+						</div>
+
+						<div modal="showModal" close="cancel()">
+							<div class="modal-header">
+								<h4>Select Agent: {{setup.agent}}</h4>
+							</div>
+							<div class="modal-body">
+
+
+								<p>Click on one of the agents to select</p>
+								<ul>
+									<li ng-repeat="Object in profiles track by $index">
+									<pre>  <a ng-click="setup.agent= Object.searchAgent"> {{Object.searchAgent}}</a>          <a
+												ng-click="setup.agent= Object.searchAgent; inactivate(setup)">delete</a>
+										</pre></li>
+								</ul>
+							</div>
+							<div class="modal-footer">
+								<button class="btn btn-success" ng-click="ok()">Select</button>
+								<button class="btn" ng-click="cancel(); setup.agent = ''">Cancel</button>
+							</div>
+						</div>
+					</div>
+
+
+
+
+					<br>
+
+					<div class="maxCandidates">
+						<label>Max Candidates:</label> 
+						<input ng-model="setup.maxCandidates" type="number" />
+					</div>
+					<div class="candidateStartIndex">
+						<label>Candidate Start Index:</label> 
+						<input ng-model="setup.candidateIndex" type="number" />
+					</div>
+					<div class="afterdate">
+						<label>After Date: (yyyy/mm/dd)</label> 
+						<input ng-model="setup.afterDate" type="text" />
+					</div>
+					<div class="skipviewed">
+						<label>Skip Viewed</label>
+					    <select ng-model="setup.skipViewed">
+							<option>Yes</option>
+							<option>No</option>
+						</select>
+					</div>
+					<div class="sortbydate">
+						<label>Sort By Date</label> 
+						<select ng-model="setup.sortByDate">
+							<option>Yes</option>
+							<option>No</option>
+						</select>
+					</div>
+					<div class="sendemail">
+						<label>Send Email</label> 
+						<select ng-model="setup.sendEmail">
+							<option>Yes</option>
+							<option>No</option>
+						</select>
+					</div>
+					<div class="skipnorelocation">
+						<label>Skip No Relocation</label> 
+						<select ng-model="setup.skipNoRelocation">
+							<option>Yes</option>
+							<option>No</option>
+						</select>
+					</div>
+					
+				</form>
+			</td>
+			<td id="right">
+				<form id="emailTemplate">
+					<div class="template">
+						<p>Email Template:</p>
+						<textarea id="email" ng-model="setup.emailTemplate" rows="20"
+							cols="80">
+        Enter your text here...
+       </textarea>
+                       <div id = "runBtn">
+                        <button id="runButton" type="submit" ng-click="sendData(setup)">
+						Run</button>
+						</div>
+					</div>
+				</form>
+				<form id="output">
+					<div>
+						<p>Output:</p>
+						<textarea id="output" ng-model="output" rows="13" cols="80">
+        
+       </textarea>
+                        
+
+					</div>
+				</form>
+			</td>
+		</tr>
+	</table>
+	<div id = "logoutBtn">
+	<button id="logoutButton" type="submit" ng-click="logout()">
+		Logout</button>
+    </div>
+</div>
